@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"     
+             xmlns:local="clr-namespace:SEMS_APP.Views"
+             xmlns:helper="clr-namespace:SEMS_APP.Helpers"
+             x:Class="SEMS_APP.AppShell">
+    <Shell.Resources>
+
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Title="Overview" x:Name="Main" Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" >
+            <ShellContent.Icon >
+                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.Home}}" Size="25"  />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Statistics"  x:Name="Statistics" Route="StatisticsPage" ContentTemplate="{DataTemplate local:StatisticsPage}">
+            <ShellContent.Icon >
+                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.ChartPie}}" Size="25"  />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Inverters"  x:Name="Inverters" Route="InvertersPage" ContentTemplate="{DataTemplate local:InvertersPage}">
+            <ShellContent.Icon >
+                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.Devices}}" Size="25"  />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="PVString"  x:Name="PVString" Route="PVStringPage" ContentTemplate="{DataTemplate local:PVStringPage}">
+            <ShellContent.Icon >
+                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.CodeString}}" Size="25"  />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="PPC"  x:Name="PPC" Route="PPCPage" ContentTemplate="{DataTemplate local:PPCPage}">
+            <ShellContent.Icon >
+                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.Braille}}" Size="25"  />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Alarms"  x:Name="Alarms" Route="AlarmsPage" ContentTemplate="{DataTemplate local:AlarmsPage}">
+            <ShellContent.Icon >
+                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.AlertOutline}}" Size="25"  />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Setting"  x:Name="Setting" Route="SettingPage" ContentTemplate="{DataTemplate local:SettingPage}">
+            <ShellContent.Icon >
+                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.Cog}}" Size="25"  />
+            </ShellContent.Icon>
+        </ShellContent>
+        <!--
+        <ShellContent Title="Inverters"   >
+        </ShellContent>
+        <ShellContent Title="Alarm"   >
+        </ShellContent>
+        <ShellContent Title="PV String"   >
+        </ShellContent>
+        <ShellContent Title="Harmonics Detail"   >
+        </ShellContent>
+        -->
+    </TabBar>
+    <!--<ShellContent x:Name="Login" Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:LoginPage}" />-->
+    <ShellContent x:Name="Register" Route="RegisterPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:RegisterPage}" />
+</Shell>

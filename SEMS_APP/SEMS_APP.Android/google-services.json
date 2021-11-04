@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "471390217328",
+    "project_id": "fir-pushnotif-b1ebb",
+    "storage_bucket": "fir-pushnotif-b1ebb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471390217328:android:297807b2954cc4432980b5",
+        "android_client_info": {
+          "package_name": "com.cpcemec.sems_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471390217328-7vb5bclm5fj0uoclh08rsssat4r576v0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzW4SfYkkCnev8EWKUA7xkqsz0ExVVRv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471390217328-7vb5bclm5fj0uoclh08rsssat4r576v0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "471390217328-dr1vl50aotn2rhsk8mgq6ms6s3q5dv73.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cpcemec.semsapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

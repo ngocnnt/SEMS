@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"  
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:helper="clr-namespace:SEMS_APP.Helpers"
+             x:Class="SEMS_APP.Views.StatisticsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="5">
+                <StackLayout HeightRequest="40" BackgroundColor="White" Margin="0,0,0,0">
+                    <Label Text="Energy Generated" TextColor="CornflowerBlue" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <tabView:SfTabView  VisibleHeaderCount="3"   
+                            x:Name="tabView"
+                            SelectionChanged="SfTabView_SelectionChanged" >
+                    <tabView:SfTabView.SelectionIndicatorSettings>
+                        <tabView:SelectionIndicatorSettings StrokeThickness="0"/>
+                    </tabView:SfTabView.SelectionIndicatorSettings>
+
+                    <tabView:SfTabItem >
+                        <tabView:SfTabItem.HeaderContent>
+                            <Grid Padding="5">
+                                <Label BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  TextColor="DeepSkyBlue" Text="Day"/>
+                                <border:SfBorder CornerRadius="20" IsVisible="True" BorderColor="DeepSkyBlue" BorderWidth="1.5">
+                                </border:SfBorder>
+                            </Grid>
+                        </tabView:SfTabItem.HeaderContent>
+                        <tabView:SfTabItem.Content>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,5">
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource FontFamily="UserIcons"  Glyph="{Binding Source={x:Static helper:FontIconClass.ChevronLeft}}" Size="20" Color="Black" />
+                                        </Image.Source>
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="PrevDayClicked"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Label Text="" x:Name="dlDay" TextColor="Red" WidthRequest="150" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource FontFamily="UserIcons"  Glyph="{Binding Source={x:Static helper:FontIconClass.ChevronRight}}" Size="20" Color="Black" />
+                                        </Image.Source>
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="NextDayClicked"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
+
+                                <chart:SfChart HeightRequest="400" WidthRequest="400" >
+                                    <chart:SfChart.Legend>
+                                        <chart:ChartLegend />
+                                    </chart:SfChart.Legend>
+
+                                    <chart:SfChart.PrimaryAxis>
+                                        <chart:CategoryAxis>
+                                            <chart:CategoryAxis.Title>
+                                                <chart:ChartAxisTitle Text="Ngày"/>
+                                            </chart:CategoryAxis.Title>
+                                        </chart:CategoryAxis>
+                                    </chart:SfChart.PrimaryAxis>
+                                    
+                                    <chart:SfChart.SecondaryAxis>
+                                        <chart:NumericalAxis>
+                                            <chart:NumericalAxis.Title>
+                                                <chart:ChartAxisTitle Text="Năng lượng"/>
+                                            </chart:NumericalAxis.Title>
+                                        </chart:NumericalAxis>
+                                    </chart:SfChart.SecondaryAxis>
+
+                                    <chart:SfChart.Series>
+                                        <chart:AreaSeries ItemsSource="{Binding DayChart}"  Label="Công suất ngày (kwh)" XBindingPath="THOI_GIAN" YBindingPath="CONG_SUAT" EnableTooltip="True" Color="MediumSeaGreen" EnableAnimation="true" ListenPropertyChange="True">
+                                        </chart:AreaSeries>
+                                    </chart:SfChart.Series>
+                                </chart:SfChart>
+                            </StackLayout>
+                        </tabView:SfTabItem.Content>
+                    </tabView:SfTabItem>
+
+                    <tabView:SfTabItem >
+                        <tabView:SfTabItem.HeaderContent>
+                            <Grid Padding="5">
+                                <Label BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  TextColor="Black" Text="Month"/>
+                                <border:SfBorder CornerRadius="20" IsVisible="False" BorderColor="DeepSkyBlue" BorderWidth="1.5">
+                                </border:SfBorder>
+                            </Grid>
+                        </tabView:SfTabItem.HeaderContent>
+                        <tabView:SfTabItem.Content>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,5">
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource FontFamily="UserIcons"  Glyph="{Binding Source={x:Static helper:FontIconClass.ChevronLeft}}" Size="20" Color="Black" />
+                                        </Image.Source>
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="PrevMonthClicked"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Label Text="" x:Name="dlMonth" TextColor="Red" WidthRequest="150" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource FontFamily="UserIcons"  Glyph="{Binding Source={x:Static helper:FontIconClass.ChevronRight}}" Size="20" Color="Black" />
+                                        </Image.Source>
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="NextMonthClicked"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
+
+                                <chart:SfChart HeightRequest="400" WidthRequest="400" >
+                                    <chart:SfChart.Legend>
+                                        <chart:ChartLegend />
+                                    </chart:SfChart.Legend>
+
+                                    <chart:SfChart.PrimaryAxis>
+                                        <chart:NumericalAxis Minimum="0" Maximum="32">
+                                            <chart:NumericalAxis.Title>
+                                                <chart:ChartAxisTitle Text="Ngày"/>
+                                            </chart:NumericalAxis.Title>
+                                        </chart:NumericalAxis>
+                                    </chart:SfChart.PrimaryAxis>
+
+                                    <chart:SfChart.SecondaryAxis>
+                                        <chart:NumericalAxis>
+                                            <chart:NumericalAxis.Title>
+                                                <chart:ChartAxisTitle Text="Năng lượng"/>
+                                            </chart:NumericalAxis.Title>
+                                        </chart:NumericalAxis>
+                                    </chart:SfChart.SecondaryAxis>
+
+                                    <chart:SfChart.Series>
+                                        <chart:ColumnSeries ItemsSource="{Binding MonthChart}"  Label="Năng lượng tháng (kwh)" XBindingPath="THANG" YBindingPath="ENERGY_DAY" EnableTooltip="True" Color="MediumSeaGreen" EnableAnimation="true" ListenPropertyChange="True">
+                                        </chart:ColumnSeries>
+                                    </chart:SfChart.Series>
+                                </chart:SfChart>
+                            </StackLayout>
+                        </tabView:SfTabItem.Content>
+                    </tabView:SfTabItem>
+
+                    <tabView:SfTabItem >
+                        <tabView:SfTabItem.HeaderContent>
+                            <Grid Padding="5">
+                                <Label BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  TextColor="Black" Text="Year"/>
+                                <border:SfBorder CornerRadius="20" IsVisible="False" BorderColor="DeepSkyBlue" BorderWidth="1.5">
+                                </border:SfBorder>
+                            </Grid>
+                        </tabView:SfTabItem.HeaderContent>
+                        <tabView:SfTabItem.Content>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,5">
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource FontFamily="UserIcons"  Glyph="{Binding Source={x:Static helper:FontIconClass.ChevronLeft}}" Size="20" Color="Black" />
+                                        </Image.Source>
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="PrevYearClicked"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Label Text="" x:Name="dlYear" TextColor="Red" WidthRequest="150" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource FontFamily="UserIcons"  Glyph="{Binding Source={x:Static helper:FontIconClass.ChevronRight}}" Size="20" Color="Black" />
+                                        </Image.Source>
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="NextYearClicked"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
+
+                                <chart:SfChart HeightRequest="400" WidthRequest="400" >
+                                    <chart:SfChart.Legend>
+                                        <chart:ChartLegend />
+                                    </chart:SfChart.Legend>
+
+                                    <chart:SfChart.PrimaryAxis>
+                                        <chart:NumericalAxis Minimum="0" Maximum="13">
+                                            <chart:NumericalAxis.Title>
+                                                <chart:ChartAxisTitle Text="Tháng"/>
+                                            </chart:NumericalAxis.Title>
+                                        </chart:NumericalAxis>
+                                    </chart:SfChart.PrimaryAxis>
+
+                                    <chart:SfChart.SecondaryAxis>
+                                        <chart:NumericalAxis>
+                                            <chart:NumericalAxis.Title>
+                                                <chart:ChartAxisTitle Text="Năng lượng"/>
+                                            </chart:NumericalAxis.Title>
+                                        </chart:NumericalAxis>
+                                    </chart:SfChart.SecondaryAxis>
+
+                                    <chart:SfChart.Series>
+                                        <chart:ColumnSeries ItemsSource="{Binding YearChart}"  Label="Năng lượng năm (kwh)" XBindingPath="THANG" YBindingPath="ENERGY_DAY" EnableTooltip="True" Color="MediumSeaGreen" EnableAnimation="true" ListenPropertyChange="True">
+                                        </chart:ColumnSeries>
+                                    </chart:SfChart.Series>
+                                </chart:SfChart>
+                            </StackLayout>
+                        </tabView:SfTabItem.Content>
+                    </tabView:SfTabItem>
+
+                </tabView:SfTabView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

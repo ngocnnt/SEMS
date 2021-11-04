@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfGrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:sfProgressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:local="clr-namespace:SEMS_APP.Helpers"
+             x:Class="SEMS_APP.Views.AlarmsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GridStyle x:Key="styleGrid"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid x:Name="mGridLayout" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                         AbsoluteLayout.LayoutBounds="1,1,1,1" >
+                <sfGrid:SfDataGrid x:Name="gridInverters"
+                                   ItemsSource="{Binding ListInverters,Mode=TwoWay}"
+                                   SelectedItem="{Binding SelectItem,Mode=TwoWay}"
+                                   Style="{StaticResource styleDataGrid}"
+                                   ColumnSizer="Star"
+                                   AutoGenerateColumns="False"             
+                                   GridStyle="{StaticResource styleGrid}"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   EnableDataVirtualization="True"
+                                   AbsoluteLayout.LayoutFlags="All" 
+                                   AbsoluteLayout.LayoutBounds="1,1,1,1"               
+                                   SelectionMode="Single"      
+                                   AutoExpandGroups ="True"               
+                                   AllowGroupExpandCollapse="False"
+                                   AllowDiagonalScrolling="True"
+                                   VerticalOverScrollMode="Bounce"
+                                   ShowColumnWhenGrouped="False"
+                                   GroupCaptionTextFormat="{}{ColumnName}: {Key}"
+                >
+                    <sfGrid:SfDataGrid.GroupColumnDescriptions>
+                        <sfGrid:GroupColumnDescription ColumnName="TEN_DIEMDO" />
+                    </sfGrid:SfDataGrid.GroupColumnDescriptions>
+                    <sfGrid:SfDataGrid.Columns >
+                        <sfGrid:GridTextColumn MappingName="TEN_DIEMDO" HeaderText="Inverters name" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
+                        <sfGrid:GridTextColumn MappingName="EVENT" HeaderText="Sự kiện" HeaderFontAttribute="Bold" HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                        <sfGrid:GridTextColumn MappingName="STATUS" HeaderText="Status" HeaderFontAttribute="Bold" HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                        <sfGrid:GridTextColumn MappingName="NGAYGIO" HeaderText="Ngày giờ" Format="HH:mm:ss dd/MM/yy" HeaderFontAttribute="Bold" HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                    </sfGrid:SfDataGrid.Columns>                    
+                </sfGrid:SfDataGrid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

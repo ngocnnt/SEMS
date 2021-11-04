@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:sfcombox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"      
+             x:Class="SEMS_APP.Views.MainPage">
+  <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="5">
+                <!--
+                <Grid ColumnDefinitions="4*,6*" Margin="10,10,10,0"
+                                  HeightRequest="{OnPlatform iOS=50 , Android=50}">
+                    
+                    <Label Text="Mã Khách Hàng" Style="{StaticResource styleLableGreen}"  Grid.Column="0"></Label>
+                    <Label Text="PP01000000001" Style="{StaticResource styleLableGreen}"  Grid.Column="1"></Label>
+                    
+                    <sfcombox:SfComboBox  x:Name="cbDonVi" Watermark="Chọn đơn vị"   
+                             DataSource="{Binding ListDonVi , Mode=TwoWay}"  
+                             HorizontalOptions="FillAndExpand"                              
+                             NoResultsFoundText="Không tìm thấy đơn vị" 
+                             DisplayMemberPath="TEN_DVIQLY" 
+                             SelectedValuePath="MA_DVIQLY"
+                             Grid.Column="1"
+                             Style="{StaticResource styleCombobox}" 
+                             SelectionChanged="cbDonVi_SelectionChanged"
+                             IsEditableMode="True"   >
+
+                    </sfcombox:SfComboBox>
+                </Grid>
+                    -->
+
+                <Grid ColumnDefinitions="10*">
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                             Grid.Column="0" Margin="5,15,0,0" >
+                        <gauge:SfCircularGauge  HeightRequest="180">
+                            <gauge:SfCircularGauge.Headers>
+                                <gauge:Header Text="{Binding HeaderActive}" ForegroundColor="Black" TextSize="15" Position="0.5,0.96"/>
+                            </gauge:SfCircularGauge.Headers>
+                            <gauge:SfCircularGauge.Scales>
+                                <gauge:Scale StartValue = "0" EndValue="{Binding EndValueActive}" Ranges="{Binding RangeActive}" Pointers="{Binding PointerActive}">
+                                </gauge:Scale>
+                            </gauge:SfCircularGauge.Scales>
+                        </gauge:SfCircularGauge>
+                    </StackLayout>
+                </Grid>
+
+                <Grid ColumnDefinitions="3.33*,3.33*,3.33*" Margin="0,5,0,0" >
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                             Grid.Column="0" BackgroundColor="MediumSeaGreen" Margin="0,0,0,0">
+                        <StackLayout HeightRequest="20">
+                            <Label Text="Today Energy Generated" TextColor="White" FontSize="11" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout HeightRequest="30">
+                            <Label Text="{Binding TodayEnergy}" TextColor="White" FontSize="15" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                             Grid.Column="1" BackgroundColor="CornflowerBlue" Margin="-5,0,0,0">
+                        <StackLayout HeightRequest="20">
+                            <Label Text="Year Energy Generated" TextColor="White" FontSize="11" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout HeightRequest="30">
+                            <Label Text="{Binding YearEnergy}" TextColor="White" FontSize="15" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                             Grid.Column="2" BackgroundColor="DeepSkyBlue" Margin="-5,0,0,0">
+                        <StackLayout HeightRequest="20">
+                            <Label Text="Total Energy Generated" TextColor="White" FontSize="11" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout HeightRequest="30">
+                            <Label Text="{Binding TotalEnergy}" TextColor="White" FontSize="15" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+
+                <!--
+                <Grid ColumnDefinitions="10*">
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                             Grid.Column="0" Margin="5,0,0,0" >
+                        <StackLayout BackgroundColor="Gray">
+                            <Label Text="Realtime Power Trend" TextColor="Black" FontSize="17" HorizontalOptions="Center" />
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </Grid>
+                -->
+                <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
+
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Realtime Power Trend"/>
+                    </chart:SfChart.Title>
+
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Thời gian"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
+
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Công suất"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
+
+                    <chart:SfChart.Series>
+                        <chart:AreaSeries ItemsSource="{Binding RealDataChart}"  Label="Công suất ngày" XBindingPath="THOI_GIAN" YBindingPath="CONG_SUAT" EnableTooltip="True" Color="MediumSeaGreen" EnableAnimation="true" ListenPropertyChange="True">
+                        </chart:AreaSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+            </StackLayout>
+        </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

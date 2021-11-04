@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfGrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:sfProgressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+
+             xmlns:local="clr-namespace:SEMS_APP.Helpers"
+             x:Class="SEMS_APP.Views.InvertersPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GridStyle x:Key="styleGrid"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid x:Name="mGridLayout" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                         AbsoluteLayout.LayoutBounds="1,1,1,1" >
+                <sfGrid:SfDataGrid x:Name="gridInverters"
+                                   ItemsSource="{Binding ListInverters,Mode=TwoWay}"
+                                   SelectedItem="{Binding SelectItem,Mode=TwoWay}"
+                                   Style="{StaticResource styleDataGrid}"
+                                   ColumnSizer="Star"
+                                   AutoGenerateColumns="False"             
+                                   GridStyle="{StaticResource styleGrid}"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   EnableDataVirtualization="True"
+                                   AbsoluteLayout.LayoutFlags="All" 
+                                   AbsoluteLayout.LayoutBounds="1,1,1,1"               
+                                   SelectionMode="Single"      
+                                   AutoExpandGroups ="True"               
+                                   AllowGroupExpandCollapse="False"
+                                   AllowDiagonalScrolling="True"
+                                   VerticalOverScrollMode="Bounce"
+                                   ShowColumnWhenGrouped="False"
+                                   GroupCaptionTextFormat="{}{ColumnName}: {Key}"
+                >
+
+                        <sfGrid:SfDataGrid.GroupColumnDescriptions>
+                            <sfGrid:GroupColumnDescription ColumnName="TEN_DIEMDO" />
+                        </sfGrid:SfDataGrid.GroupColumnDescriptions>
+                        <sfGrid:SfDataGrid.Columns >
+
+                        <sfGrid:GridTextColumn MappingName="TEN_DIEMDO" HeaderText="Inverters name" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
+                        <sfGrid:GridTextColumn MappingName="POWER_TOTAL_DESIGN" HeaderText="P TK(kW)" Format="###,###,##0" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                        <sfGrid:GridTextColumn MappingName="SETPOINT_P"   HeaderText="ST HT (%)" Format="###" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+
+                        <sfGrid:GridTextColumn MappingName="POWER_TOTAL"   HeaderText="P HT(W)" Format="###,##0.00" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                        <sfGrid:GridTemplateColumn MappingName="PERFORMANCE" HeaderText="Hiệu suất(%)" Format="##0.00" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                            <sfGrid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" MinimumHeightRequest="100">
+                                        <sfProgressBar:SfLinearProgressBar Progress="{Binding PERFORMANCE}" TrackColor="#33ffbe06" ProgressColor="#FFffbe06" Minimum="0" Maximum="100" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TrackHeight="30" CornerRadius="10" AnimationDuration="0"/>
+                                        <Label Text="{Binding PERFORMANCE}" TextColor="Black" FontSize="14" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </sfGrid:GridTemplateColumn.CellTemplate>
+                        </sfGrid:GridTemplateColumn>
+
+                        <!--
+                        <sfGrid:GridTemplateColumn MappingName="PERFORMANCE" Width="200">
+                            <sfGrid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Frame HasShadow="False" HeightRequest="20" CornerRadius="5" HorizontalOptions="Fill" Padding="0" BackgroundColor="Silver" IsClippedToBounds="True">
+                                        <AbsoluteLayout>
+                                            <ContentView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,.33,1"  BackgroundColor="CadetBlue">
+                                                <Label Text="{Binding PERFORMANCE}"  FontSize="Small"  HorizontalOptions="Center"  VerticalOptions="Center"  TextColor="White" FontAttributes="Bold" />
+                                            </ContentView>
+                                        </AbsoluteLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </sfGrid:GridTemplateColumn.CellTemplate>
+                        </sfGrid:GridTemplateColumn>
+-->
+                    </sfGrid:SfDataGrid.Columns>
+                    <sfGrid:SfDataGrid.TableSummaryRows>
+                        <sfGrid:GridTableSummaryRow ShowSummaryInRow="False">
+                            <sfGrid:GridSummaryRow.SummaryColumns>
+                                <sfGrid:GridSummaryColumn Name="Total_POWER_TOTAL_DESIGN"
+                                              Format="Tổng: {Sum:###,###,##0}"
+                                              MappingName="POWER_TOTAL_DESIGN"
+                                              SummaryType="DoubleAggregate" />
+                                <sfGrid:GridSummaryColumn Name="Avg_SETPOINT_P"
+                                              Format="TB: {Average:###}"
+                                              MappingName="SETPOINT_P"
+                                              SummaryType="DoubleAggregate" />
+                                <sfGrid:GridSummaryColumn Name="Total_POWER_TOTAL"
+                                              Format="Tổng: {Sum:###,##0.00}"
+                                              MappingName="POWER_TOTAL"
+                                              SummaryType="DoubleAggregate" />
+                                <sfGrid:GridSummaryColumn Name="Avg_PERFORMANCE"
+                                              Format="TB: {Average:##0.00}"
+                                              MappingName="PERFORMANCE"
+                                              SummaryType="DoubleAggregate" />
+                            </sfGrid:GridSummaryRow.SummaryColumns>
+                        </sfGrid:GridTableSummaryRow>
+                    </sfGrid:SfDataGrid.TableSummaryRows>
+                </sfGrid:SfDataGrid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

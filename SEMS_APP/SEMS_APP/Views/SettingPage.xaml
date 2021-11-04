@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:local="clr-namespace:SEMS_APP.Helpers"
+             x:Class="SEMS_APP.Views.SettingPage">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout Spacing="0" Margin="30,50,0,0" HeightRequest="150">
+                <circleImage:CircleImage Source="LogoEMEC.jpg" Aspect="AspectFill" HeightRequest="60"
+                                         BorderThickness="1"
+                                         WidthRequest="60" HorizontalOptions="Center"/>
+                <Label Text="Kính chào Quý khách." Style="{StaticResource styleLableGreen}"                       
+                       HorizontalTextAlignment="Center"
+                       Margin="{OnPlatform Android= '40,20,40,-20' , iOS='0,10,0,0'}"
+                       FontSize="18"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Image HeightRequest="40" WidthRequest="40" Margin="20,0,20,0" Aspect="AspectFit">
+                    <Image.Source>
+                        <FontImageSource FontFamily="UserIcons"  Glyph="{x:Static local:FontIconClass.Fingerprint}" Color="#0c832f"></FontImageSource>
+                    </Image.Source>
+                </Image>
+                <Label Text="Đăng nhập bằng vân tay" VerticalTextAlignment="Center" Style="{StaticResource styleLable}" FontSize="18"/>
+                <sfButton:SfSwitch x:Name="sfSwitch" IsOn="{Binding ToggledVanTay}" StateChanged="sfSwitch_StateChanged" IsEnabled="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VisualType="Cupertino" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="On">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <sfButton:CupertinoSwitchSettings x:TypeArguments="sfButton:OnState" ThumbColor="#3dcc63" TrackColor="#d1ffd1"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Off">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <sfButton:CupertinoSwitchSettings x:TypeArguments="sfButton:OffState" ThumbColor="#82807a" TrackColor="#d9d7d2"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </sfButton:SfSwitch>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Image HeightRequest="40" WidthRequest="40" Margin="20,0,20,0" Aspect="AspectFit">
+                    <Image.Source>
+                        <FontImageSource FontFamily="UserIcons"  Glyph="{x:Static local:FontIconClass.Power}" Color="#0c832f"></FontImageSource>
+                    </Image.Source>
+                </Image>
+                <Label Text="Đăng xuất" VerticalTextAlignment="Center" Style="{StaticResource styleLable}" FontSize="18"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LogOut_Tap" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

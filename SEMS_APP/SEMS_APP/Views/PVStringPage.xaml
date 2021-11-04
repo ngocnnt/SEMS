@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfGrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:sfProgressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             xmlns:local="clr-namespace:SEMS_APP.Helpers"
+             x:Class="SEMS_APP.Views.PVStringPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GridStyle x:Key="styleGrid"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Grid x:Name="mGridLayout" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                         AbsoluteLayout.LayoutBounds="1,1,1,1" >
+                <sfGrid:SfDataGrid x:Name="gridInverters"
+                                   ItemsSource="{Binding ListPVString,Mode=TwoWay}"
+                                   SelectedItem="{Binding SelectItem,Mode=TwoWay}"
+                                   Style="{StaticResource styleDataGrid}"
+                                   ColumnSizer="Star"
+                                   AutoGenerateColumns="False"             
+                                   GridStyle="{StaticResource styleGrid}"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   EnableDataVirtualization="True"
+                                   AbsoluteLayout.LayoutFlags="All" 
+                                   AbsoluteLayout.LayoutBounds="1,1,1,1"               
+                                   SelectionMode="Single"      
+                                   AutoExpandGroups ="True"               
+                                   AllowGroupExpandCollapse="False"
+                                   AllowDiagonalScrolling="True"
+                                   VerticalOverScrollMode="Bounce"
+                                   ShowColumnWhenGrouped="False"
+                                   GroupCaptionTextFormat="{}{ColumnName}: {Key}"
+                >
+
+                    <sfGrid:SfDataGrid.GroupColumnDescriptions>
+                        <sfGrid:GroupColumnDescription ColumnName="MA_DIEMDO" />
+                    </sfGrid:SfDataGrid.GroupColumnDescriptions>
+                    <sfGrid:SfDataGrid.Columns >
+
+                        <sfGrid:GridTextColumn MappingName="MA_DIEMDO" HeaderText="Inverters name" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
+                        <sfGrid:GridTextColumn MappingName="STRING" HeaderText="String" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                        <sfGrid:GridTextColumn MappingName="VA" HeaderText="U(V)" Format="##0.0" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                        <sfGrid:GridTextColumn MappingName="IA"   HeaderText="I(A)" Format="##0.00" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                        <sfGrid:GridTextColumn MappingName="WA"   HeaderText="P(W)" Format="###,##0.00" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                        </sfGrid:GridTextColumn>
+                        <sfGrid:GridTemplateColumn MappingName="RATIO" HeaderText="Tỉ lệ(%)" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
+                            <sfGrid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" MinimumHeightRequest="100">
+                                        <sfProgressBar:SfLinearProgressBar Progress="{Binding RATIO}" TrackColor="#33ffbe06" ProgressColor="#FFffbe06" Minimum="0" Maximum="100" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TrackHeight="30" CornerRadius="10" AnimationDuration="0"/>
+                                        <Label Text="{Binding RATIO}" TextColor="Black" FontSize="14" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </sfGrid:GridTemplateColumn.CellTemplate>
+                        </sfGrid:GridTemplateColumn>
+
+                    </sfGrid:SfDataGrid.Columns>
+                    <!--
+                    <sfGrid:SfDataGrid.TableSummaryRows>
+                        <sfGrid:GridTableSummaryRow ShowSummaryInRow="False">
+                            <sfGrid:GridSummaryRow.SummaryColumns>
+                                <sfGrid:GridSummaryColumn Name="Total_STRING"
+                                              Format="Count: {Count}"
+                                              MappingName="STRING"
+                                              SummaryType="DoubleAggregate" />
+                                <sfGrid:GridSummaryColumn Name="Avg_IA"
+                                              Format="TB: {Average}"
+                                              MappingName="IA"
+                                              SummaryType="DoubleAggregate" />
+                                <sfGrid:GridSummaryColumn Name="Total_WA"
+                                              Format="Tổng: {Sum}"
+                                              MappingName="WA"
+                                              SummaryType="DoubleAggregate" />
+                            </sfGrid:GridSummaryRow.SummaryColumns>
+                        </sfGrid:GridTableSummaryRow>
+                    </sfGrid:SfDataGrid.TableSummaryRows>
+                    -->
+                    <sfGrid:SfDataGrid.GroupSummaryRows>
+                        <sfGrid:GridGroupSummaryRow ShowSummaryInRow="False">
+                            <sfGrid:GridSummaryRow.SummaryColumns>
+                                <sfGrid:GridSummaryColumn Name="Total_STRING"
+                                              Format="SL: {Count}"
+                                              MappingName="STRING"
+                                              SummaryType="DoubleAggregate" />
+                                <sfGrid:GridSummaryColumn Name="Avg_IA"
+                                              Format="TB: {Average:##0.00}"
+                                              MappingName="IA"
+                                              SummaryType="DoubleAggregate" />
+                                <sfGrid:GridSummaryColumn Name="Total_WA"
+                                              Format="Tổng: {Sum:###,##0.00}"
+                                              MappingName="WA"
+                                              SummaryType="DoubleAggregate" />
+                            </sfGrid:GridSummaryRow.SummaryColumns>
+                        </sfGrid:GridGroupSummaryRow>
+                    </sfGrid:SfDataGrid.GroupSummaryRows>
+                </sfGrid:SfDataGrid>
+            </Grid>            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
