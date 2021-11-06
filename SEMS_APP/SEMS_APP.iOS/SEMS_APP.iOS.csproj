@@ -14,7 +14,7 @@
     <AssemblyName>SEMS_APP.iOS</AssemblyName>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <ProvisioningType>automatic</ProvisioningType>
+    <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +30,8 @@
     <MtouchExtraArgs>--linkskip=ImageCircle.Forms.Plugin.iOS --linkskip=ImageCircle.Forms.Plugin.Abstractions</MtouchExtraArgs>
     <OptimizePNGs>true</OptimizePNGs>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <CodesignKey>Apple Development: NGUYEN T THAI NGOC (SQ944M7T32)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>

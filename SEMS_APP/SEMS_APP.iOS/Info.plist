@@ -32,8 +32,6 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>SEMS_APP</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Vui lòng quét ID Face</string>
 	<key>UIBackgroundModes</key>
@@ -42,5 +40,13 @@
 	</array>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1</string>
+	<key>UIMainStoryboardFile</key>
+	<string>LaunchScreen</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
 </dict>
 </plist>
