@@ -91,6 +91,14 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\bin\iPhoneSimulator\D
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\bin\iPhoneSimulator\Debug\SEMS_APP.pdb
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\optimized\
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.csproj.AssemblyReference.cache
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.csproj.CoreCompileInputs.cache
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.exe
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.pdb
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\Contents.json.ResolveUTIs.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\Icon1024.png.ResolveUTIs.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\Icon180.png.ResolveUTIs.stamp
@@ -105,9 +113,6 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\D
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\Icon40.png.ResolveUTIs.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\Icon29.png.ResolveUTIs.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\Icon20.png.ResolveUTIs.stamp
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\optimized\error_7
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\optimized\error_7@2x
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\optimized\error
@@ -118,12 +123,6 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\D
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\optimized\success@2x
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\optimized\loginbackground.png
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\optimized\GoogleService-Info.plist
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\optimized\
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.csproj.AssemblyReference.cache
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.csproj.CoreCompileInputs.cache
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.csproj.CopyComplete
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.exe
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.pdb
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\BTProgressHUD.dll.ReferenceCopyLocalPaths.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\BTProgressHUD.pdb.ReferenceCopyLocalPaths.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\MQTTnet.dll.ReferenceCopyLocalPaths.stamp
@@ -183,3 +182,4 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\D
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\SEMS_APP.iOS.pdb.DebugSymbolsProjectOutputGroupOutput.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\Entitlements.plist.NoneOutput.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\Info.plist.NoneOutput.stamp
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.csproj.CopyComplete

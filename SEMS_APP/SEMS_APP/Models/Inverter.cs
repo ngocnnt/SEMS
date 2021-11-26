@@ -54,7 +54,19 @@ namespace SEMS_APP.Models
         //public bool? REMOTE_CONTROL { get; set; }
         public string STATUS { get; set; }
         public string EVENT { get; set; }
-        public int? SETPOINT_P_HT { get; set; }
+        //public int SETPOINT_P_HT { get; set; }
+        private int _SETPOINT_P_HT;
+
+        public int SETPOINT_P_HT
+        {
+            get { return _SETPOINT_P_HT; }
+            set
+            {
+                _SETPOINT_P_HT = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SETPOINT_P_HT"));
+            }
+        }
+
         //public bool CHECK { get; set; }
         private string _TEN_DIEMDO;
         public string TEN_DIEMDO
