@@ -179,3 +179,4 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\R
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Release\CopyFilesToMac\SEMS_APP.pdb.ReferenceCopyLocalPaths.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Release\CopyFilesToMac\Entitlements.plist.NoneOutput.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Release\CopyFilesToMac\Info.plist.NoneOutput.stamp
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Release\SEMS_APP.iOS.csproj.CopyComplete

@@ -13,7 +13,7 @@ namespace SEMS_APP.Global
         public static string Token = "Token";
         public static string AprroveFinger = "AprroveFinger";
         public static string AprrovePassword = "AprrovePassword";
-        public static string Url = "http://smart.cpc.vn/SEMSApi/";
+        public static string Url = "http://10.72.8.5/SEMS/";//"http://smart.cpc.vn/SEMSApi/";
         public static string device_token = "";
         public static HttpClient client;
         public static string ma_dvql = "";
