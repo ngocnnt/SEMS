@@ -18,11 +18,32 @@ namespace SEMS_APP.Models
         public string MA_DIEMDO { get; set; }
         //public string TEN_DIEMDO { get; set; }
         public string MA_CAPDA { get; set; }
-        public int SERIALID { get; set; }
+        public string SERIALID { get; set; }
         public string METER_TYPE { get; set; }
         //public int POWER_TOTAL_DESIGN { get; set; }
-        public DateTime NGAYGIO { get; set; }
-        public decimal? POWER_TOTAL { get; set; }
+        //public DateTime NGAYGIO { get; set; }
+        private DateTime _NGAYGIO;
+        public DateTime NGAYGIO
+        {
+            get { return _NGAYGIO; }
+            set
+            {
+                _NGAYGIO = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NGAYGIO"));
+            }
+        }
+        //public decimal? POWER_TOTAL { get; set; }
+        private decimal? _POWER_TOTAL;
+
+        public decimal? POWER_TOTAL
+        {
+            get { return _POWER_TOTAL; }
+            set
+            {
+                _POWER_TOTAL = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("POWER_TOTAL"));
+            }
+        }
         public decimal? ENERGY_DAY { get; set; }
         public decimal? ENERGY_WEEK { get; set; }
         public decimal? ENERGY_MONTH { get; set; }
@@ -48,12 +69,43 @@ namespace SEMS_APP.Models
         public decimal? RP_B { get; set; }
         public decimal? RP_C { get; set; }
         public decimal? RP_T { get; set; }
-        public decimal? SETPOINT_P { get; set; }
+        //public decimal? SETPOINT_P { get; set; }
+        private decimal? _SETPOINT_P;
+
+        public decimal? SETPOINT_P
+        {
+            get { return _SETPOINT_P; }
+            set
+            {
+                _SETPOINT_P = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SETPOINT_P"));
+            }
+        }
         public decimal? SETPOINT_PF { get; set; }
         public decimal? SETPOINT_Q { get; set; }
         //public bool? REMOTE_CONTROL { get; set; }
-        public string STATUS { get; set; }
-        public string EVENT { get; set; }
+        //public string STATUS { get; set; }
+        private string _STATUS;
+        public string STATUS
+        {
+            get { return _STATUS; }
+            set
+            {
+                _STATUS = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("STATUS"));
+            }
+        }
+        //public string EVENT { get; set; }
+        private string _EVENT;
+        public string EVENT
+        {
+            get { return _EVENT; }
+            set
+            {
+                _EVENT = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EVENT"));
+            }
+        }
         //public int SETPOINT_P_HT { get; set; }
         private int _SETPOINT_P_HT;
 

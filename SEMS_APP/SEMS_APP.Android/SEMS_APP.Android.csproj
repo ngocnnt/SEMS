@@ -37,7 +37,7 @@
     <EnableLLVM>false</EnableLLVM>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip>ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android;</AndroidLinkSkip>
+    <AndroidLinkSkip>ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android</AndroidLinkSkip>
     <MandroidI18n />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -53,7 +53,6 @@
     <EnableLLVM>false</EnableLLVM>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
@@ -61,6 +60,9 @@
     <AndroidSigningKeyStore>D:\eclipse\android.jks</AndroidSigningKeyStore>
     <AndroidSigningStorePass>Seichan123!@#</AndroidSigningStorePass>
     <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkSkip>ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android;</AndroidLinkSkip>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -159,6 +161,7 @@
     <AndroidAsset Include="Assets\RobotoRegular.ttf" />
     <AndroidAsset Include="Assets\RobotoBold.ttf" />
     <GoogleServicesJson Include="google-services.json" />
+    <ProguardConfiguration Include="proguard.cfg" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

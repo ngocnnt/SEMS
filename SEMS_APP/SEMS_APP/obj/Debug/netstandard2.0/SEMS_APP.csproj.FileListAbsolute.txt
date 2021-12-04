@@ -2,7 +2,6 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\bin\Debug\netstandard2.0\
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\bin\Debug\netstandard2.0\SEMS_APP.dll
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\bin\Debug\netstandard2.0\ref\SEMS_APP.dll
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\bin\Debug\netstandard2.0\SEMS_APP.pdb
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\SEMS_APP.csproj.AssemblyReference.cache
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\SEMS_APP.GeneratedMSBuildEditorConfig.editorconfig
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
@@ -26,3 +25,4 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\SEMS_APP.dll
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\ref\SEMS_APP.dll
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\SEMS_APP.pdb
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Debug\netstandard2.0\SEMS_APP.csproj.AssemblyReference.cache

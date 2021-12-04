@@ -16,9 +16,9 @@ namespace SEMS_APP.Droid
 {
     //[Application]
 #if DEBUG
-    [Application(Debuggable = true, UsesCleartextTraffic = true)]
+    [Application(Debuggable = true)]
 #else
-    [Application(Debuggable = false, UsesCleartextTraffic = false)]
+    [Application(Debuggable = false)]
 #endif
     public class MainApplication : Application
     {

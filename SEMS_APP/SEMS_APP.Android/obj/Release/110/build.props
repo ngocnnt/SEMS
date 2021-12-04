@@ -5,12 +5,13 @@ androidaotmode=none
 androidembedprofilers=
 androidenableprofiledaot=false
 androiddextool=d8
-androidlinktool=r8
+androidlinktool=
 androidlinkresources=false
 androidpackageformat=aab
 embedassembliesintoapk=true
-androidlinkmode=sdkonly
-androidlinkskip=
+androidlinkmode=none
+androidlinkskip=imagecircle.forms.plugin.abstractions
+imagecircle.forms.plugin.android
 androidsdkbuildtoolsversion=30.0.2
 androidsdkpath=d:\android\android-sdk-xamarin\android-sdk\
 androidndkpath=
@@ -25,7 +26,7 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=false
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=637735125865366955
+_nugetassetstimestamp=637742279649146682
 typemapkind=mvid
 androidsupportedabis=arm64-v8a
 armeabi-v7a

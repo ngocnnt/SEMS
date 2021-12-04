@@ -25,4 +25,3 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Release\netstandard2.
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Release\netstandard2.0\SEMS_APP.dll
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Release\netstandard2.0\ref\SEMS_APP.dll
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Release\netstandard2.0\SEMS_APP.pdb
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP\obj\Release\netstandard2.0\SEMS_APP.csproj.AssemblyReference.cache

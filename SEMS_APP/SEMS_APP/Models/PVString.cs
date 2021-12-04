@@ -39,12 +39,52 @@ namespace SEMS_APP.Models
         public string SERIALID { get; set; }
         public string METER_TYPE { get; set; }
         public DateTime NGAYGIO { get; set; }
-        public string STRING { get; set; }
-        public decimal IA { get; set; }
+        //public string STRING { get; set; }
+        private string _STRING;
+        public string STRING
+        {
+            get { return _STRING; }
+            set
+            {
+                _STRING = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("STRING"));
+            }
+        }
+        //public decimal IA { get; set; }
+        private decimal _IA;
+        public decimal IA
+        {
+            get { return _IA; }
+            set
+            {
+                _IA = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IA"));
+            }
+        }
         public decimal I { get; set; }
-        public decimal VA { get; set; }
+        //public decimal VA { get; set; }
+        private decimal _VA;
+        public decimal VA
+        {
+            get { return _VA; }
+            set
+            {
+                _VA = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("VA"));
+            }
+        }
         public decimal V { get; set; }
-        public decimal WA { get; set; }
+        //public decimal WA { get; set; }
+        private decimal _WA;
+        public decimal WA
+        {
+            get { return _WA; }
+            set
+            {
+                _WA = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WA"));
+            }
+        }
         public decimal W { get; set; }
         //public decimal RATIO { get; set; }
         private decimal _RATIO;
