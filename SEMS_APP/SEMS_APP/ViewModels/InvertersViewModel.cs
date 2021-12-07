@@ -40,22 +40,24 @@ namespace SEMS_APP.ViewModels
         }
         public InvertersViewModel()
         {
-            ListInverters = new ObservableCollection<Inverter>();
-            foreach (Inverter temp in clsVaribles._dtInverter)
-            {
-                ListInverters.Add(temp);
-                //BarBounds = new Rectangle(0, 0, (double)temp.PERFORMANCE, 1);
-            }
+            ListInverters = clsVaribles._dtInverter;
+            //ListInverters = new ObservableCollection<Inverter>();
+            //foreach (Inverter temp in clsVaribles._dtInverter)
+            //{
+            //    ListInverters.Add(temp);
+            //    //BarBounds = new Rectangle(0, 0, (double)temp.PERFORMANCE, 1);
+            //}
         }
         public void Data2Grid()
         {
-            ListInverters.Clear();
-            foreach (Inverter tempAdd in clsVaribles._dtInverter)
-            {
-                ListInverters.Add(tempAdd);
-                BarBounds = new Rectangle(0, 0, (double)tempAdd.PERFORMANCE, 1);
-                //BarBounds.Add(new Rectangle(0, 0, (double) tempAdd.PERFORMANCE, 1));
-            }
+            ListInverters = clsVaribles._dtInverter;
+            //ListInverters.Clear();
+            //foreach (Inverter tempAdd in clsVaribles._dtInverter)
+            //{
+            //    ListInverters.Add(tempAdd);
+            ////    //BarBounds = new Rectangle(0, 0, (double)tempAdd.PERFORMANCE, 1);
+            ////    //BarBounds.Add(new Rectangle(0, 0, (double) tempAdd.PERFORMANCE, 1));
+            //}
         }
     }
 }

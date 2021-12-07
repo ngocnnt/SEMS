@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -24,10 +25,10 @@ namespace SEMS_APP.Views
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    gridInverters.View.BeginInit();
+                    //gridInverters.View.BeginInit();
                     viewModel.Data2Grid();
-                    gridInverters.View.EndInit();
-                    gridInverters.View.Refresh();
+                    //gridInverters.View.EndInit();
+                    //gridInverters.View.Refresh();
                 });
             });
         }

@@ -153,19 +153,31 @@ namespace SEMS_APP.Interface
 
         public Task HandleApplicationMessageReceivedAsync(MqttApplicationMessageReceivedEventArgs e)
         {
-            string message = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
-            if (e.ApplicationMessage.Topic == clsVaribles._topic.data)
+            string message = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);          
+            string[] topic = e.ApplicationMessage.Topic.Split('/');
+            if (topic[0] == "REALTIME")
             {
                 Inverter data = JsonConvert.DeserializeObject<Inverter>(message);
-                clsGen.analyze_inverter(data, clsVaribles._dtInverter);
-                MessagingCenter.Send<SubscribeCallback>(this, "MQTTRev");
-
+                if (data.NGAYGIO >= DateTime.Now.AddMilliseconds(-10))
+                {
+                    clsGen.analyze_inverter(data, clsVaribles._dtInverter);
+                    MessagingCenter.Send<SubscribeCallback>(this, "MQTTRev");
+                }
+                else
+                {
+                    return Task.CompletedTask;
+                }    
             }
-            if (e.ApplicationMessage.Topic == clsVaribles._topic.pvstring)
+            else if (topic[0] == "PVSTRING")
             {
                 ObservableCollection <PVString> data = JsonConvert.DeserializeObject<ObservableCollection<PVString>>(message);
                 clsGen.analyze_pvstring(data, clsVaribles._dtPVString);
                 MessagingCenter.Send<SubscribeCallback>(this, "MQTTPvstring");
+            }
+            else if (e.ApplicationMessage.Topic == clsVaribles._topic.phanhoi)
+            {
+                clsVaribles._dtPhanHoiMqtt = JsonConvert.DeserializeObject<ObservableCollection<clsVaribles.CAP_NHAT_CONG_SUAT>>(message); ;
+                MessagingCenter.Send<SubscribeCallback>(this, "MQTTPhanhoi");
             }
             return Task.CompletedTask;
         }
