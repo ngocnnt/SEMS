@@ -28,21 +28,23 @@ namespace SEMS_APP.ViewModels
         public int AnimationDuration { get => _animationDuration; set => SetProperty(ref _animationDuration, value); }
         public PVStringViewModel()
         {
-            ListPVString = new ObservableCollection<PVString>();
-            foreach (PVString temp in clsVaribles._dtPVString)
-            {
-                ListPVString.Add(temp);
-            }
+            ListPVString = clsVaribles._dtPVString;
+            //ListPVString = new ObservableCollection<PVString>();
+            //foreach (PVString temp in clsVaribles._dtPVString)
+            //{
+            //    ListPVString.Add(temp);
+            //}
         }
         public void Data2Grid()
         {
-            ListPVString.Clear();
-            //ListPVString = new ObservableCollection<PVString>();
-            //ListPVString = clsVaribles._dtPVString;
-            foreach (PVString tempAdd in clsVaribles._dtPVString)
-            {
-                ListPVString.Add(tempAdd);
-            }
+            ListPVString = clsVaribles._dtPVString;
+            //ListPVString.Clear();
+            ////ListPVString = new ObservableCollection<PVString>();
+            ////ListPVString = clsVaribles._dtPVString;
+            //foreach (PVString tempAdd in clsVaribles._dtPVString)
+            //{
+            //    ListPVString.Add(tempAdd);
+            //}
         }
     }
 }

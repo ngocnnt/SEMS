@@ -33,9 +33,9 @@ namespace SEMS_APP.Models
             }
         }
         //public decimal? POWER_TOTAL { get; set; }
-        private decimal? _POWER_TOTAL;
+        private decimal _POWER_TOTAL;
 
-        public decimal? POWER_TOTAL
+        public decimal POWER_TOTAL
         {
             get { return _POWER_TOTAL; }
             set
@@ -162,9 +162,9 @@ namespace SEMS_APP.Models
             }
         }
 
-        private decimal? _PERFORMANCE;
+        private decimal _PERFORMANCE;
 
-        public decimal? PERFORMANCE
+        public decimal PERFORMANCE
         {
             get { return _PERFORMANCE; }
             set

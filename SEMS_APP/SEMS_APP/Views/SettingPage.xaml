@@ -21,10 +21,10 @@
             <StackLayout Orientation="Horizontal" Margin="10">
                 <Image HeightRequest="40" WidthRequest="40" Margin="20,0,20,0" Aspect="AspectFit">
                     <Image.Source>
-                        <FontImageSource FontFamily="UserIcons"  Glyph="{x:Static local:FontIconClass.Fingerprint}" Color="#0c832f"></FontImageSource>
+                        <FontImageSource FontFamily="UserIcons" Glyph="{Binding Fingerprint}" Color="#0c832f"></FontImageSource>
                     </Image.Source>
                 </Image>
-                <Label Text="Đăng nhập bằng vân tay" VerticalTextAlignment="Center" Style="{StaticResource styleLable}" FontSize="18"/>
+                <Label Text="{OnPlatform Android= 'Đăng nhập bằng vân tay' , iOS='Đăng nhập bằng khuôn mặt'}" VerticalTextAlignment="Center" Style="{StaticResource styleLable}" FontSize="18"/>
                 <sfButton:SfSwitch x:Name="sfSwitch" IsOn="{Binding ToggledVanTay}" StateChanged="sfSwitch_StateChanged" IsEnabled="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VisualType="Cupertino" >
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroup x:Name="CommonStates">

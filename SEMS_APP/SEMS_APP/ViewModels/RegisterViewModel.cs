@@ -28,10 +28,12 @@ namespace SEMS_APP.ViewModels
         string _password;
         string _thongbao;
         string _eyeOutline;
+        string _fingerprint;
         public bool IsPasswordShow { get => _isShowHidePassword; set { SetProperty(ref _isShowHidePassword, value); } }
         public string Password { get => _password; set { SetProperty(ref _password, value); } }
         public string FullName { get => _fullname; set { SetProperty(ref _fullname, value); } }
         public string EyeOutline { get => _eyeOutline; set { SetProperty(ref _eyeOutline, value); } }
+        public string Fingerprint { get => _fingerprint; set { SetProperty(ref _fingerprint, value); } }
         public string THONG_BAO { get => _thongbao; set { SetProperty(ref _thongbao, value); } }
         //ObservableCollection<User> _user;
         //public ObservableCollection<User> Users { get => _user; set { SetProperty(ref _user, value); } }
@@ -48,6 +50,9 @@ namespace SEMS_APP.ViewModels
             _isAprroveFinger = Preferences.Get(Config.AprroveFinger, false);
             IsPasswordShow = true;
             EyeOutline = FontIconClass.EyeOffOutline;
+            if (DeviceInfo.Platform.ToString() == "Android")
+                Fingerprint = FontIconClass.Fingerprint;
+            else Fingerprint = FontIconClass.FaceRecognition;
             LoginCommand = new Command(OnLoginClicked, ValidateLogin);
             FingerComand = new Command(OnFingerCLicked);
             this.PropertyChanged +=
@@ -112,6 +117,11 @@ namespace SEMS_APP.ViewModels
 
         private async void OnFingerCLicked(object obj)
         {
+            string text = "";
+            if (DeviceInfo.Platform.ToString() == "Android")
+                text = "vân tay";
+            else
+                text = "Face ID";
             if (!CheckInternet())
             {
                 return;
@@ -119,12 +129,10 @@ namespace SEMS_APP.ViewModels
 
             if (!_isAprroveFinger)
             {
-                await new MessageBox("Ứng dụng chưa được cài đặt vân tay. Vui lòng đăng nhập bằng mật khẩu và vào Setting để cài đặt vân tay.").Show();
+                await new MessageBox("Ứng dụng chưa được cài đặt " + text + ". Vui lòng đăng nhập bằng mật khẩu và vào Setting để cài đặt " + text).Show();
                 return;
-            }    
-
-            var result = await CrossFingerprint.Current.AuthenticateAsync(new AuthenticationRequestConfiguration("SEMS", "Vui lòng quét vân tay"));
-            
+            }
+            var result = await CrossFingerprint.Current.AuthenticateAsync(new AuthenticationRequestConfiguration("SEMS", text));
             if (result.Authenticated)
             {
                 try
@@ -169,8 +177,10 @@ namespace SEMS_APP.ViewModels
             }
             else
             {
-                if (result.ErrorMessage != "Cancel")
-                    await new MessageBox("Vân tay không đúng").Show();
+                if (result.ErrorMessage == "NoFingerprint")
+                    await new MessageBox("Thiết bị chưa cài đặt " + text).Show();
+                else if (result.ErrorMessage != "Cancel")
+                    await new MessageBox("Không nhận dạng được").Show();
             }
         }
 

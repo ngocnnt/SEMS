@@ -24,10 +24,10 @@ namespace SEMS_APP.Views
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    gridInverters.View.BeginInit();
+                    //gridInverters.View.BeginInit();
                     viewModel.Data2Grid();
-                    gridInverters.View.EndInit();
-                    gridInverters.View.Refresh();
+                    //gridInverters.View.EndInit();
+                    //gridInverters.View.Refresh();
                 });
             });
         }

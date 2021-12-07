@@ -38,11 +38,12 @@
                 >
 
                         <sfGrid:SfDataGrid.GroupColumnDescriptions>
-                            <sfGrid:GroupColumnDescription ColumnName="TEN_DIEMDO" />
+                        <sfGrid:GroupColumnDescription ColumnName="MA_KHANG" />
                         </sfGrid:SfDataGrid.GroupColumnDescriptions>
                         <sfGrid:SfDataGrid.Columns >
 
-                        <sfGrid:GridTextColumn MappingName="TEN_DIEMDO" HeaderText="Inverters name" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
+                        <sfGrid:GridTextColumn MappingName="MA_KHANG" HeaderText="Mã khách hàng" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
+                        <sfGrid:GridTextColumn MappingName="TEN_DIEMDO" HeaderText="Inverters" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
                         <sfGrid:GridTextColumn MappingName="POWER_TOTAL_DESIGN" HeaderText="P TK(kW)" Format="###,###,##0" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
                         </sfGrid:GridTextColumn>
                         <sfGrid:GridTextColumn MappingName="SETPOINT_P"   HeaderText="ST HT (%)" Format="###" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
@@ -77,6 +78,8 @@
                         </sfGrid:GridTemplateColumn>
 -->
                     </sfGrid:SfDataGrid.Columns>
+
+                    <!--
                     <sfGrid:SfDataGrid.TableSummaryRows>
                         <sfGrid:GridTableSummaryRow ShowSummaryInRow="False">
                             <sfGrid:GridSummaryRow.SummaryColumns>
@@ -99,6 +102,7 @@
                             </sfGrid:GridSummaryRow.SummaryColumns>
                         </sfGrid:GridTableSummaryRow>
                     </sfGrid:SfDataGrid.TableSummaryRows>
+                    -->
                 </sfGrid:SfDataGrid>
             </Grid>
         </StackLayout>

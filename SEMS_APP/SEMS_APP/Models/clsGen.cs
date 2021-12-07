@@ -23,7 +23,7 @@ namespace SEMS_APP.Models
                             row.ENERGY_DAY = data.ENERGY_DAY / 1000;
                             row.ENERGY_YEAR = data.ENERGY_YEAR / 1000000;
                             row.ENERGY_TOTAL = data.ENERGY_TOTAL / 1000000;
-                            row.PERFORMANCE = data.POWER_TOTAL / ((int)row.POWER_TOTAL_DESIGN * 10);
+                            row.PERFORMANCE = Math.Round(data.POWER_TOTAL / ((int)row.POWER_TOTAL_DESIGN * 10), 2);
                             row.A_A = data.A_A;
                             row.A_B = data.A_B;
                             row.A_C = data.A_C;

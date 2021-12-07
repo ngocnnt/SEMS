@@ -68,21 +68,25 @@ namespace SEMS_APP.ViewModels
             }
         }
 
+        ObservableCollection<string> ma_diemdo_change = new ObservableCollection<string>();
+
         public PPCViewModel()
         {
-            ListInverters = new ObservableCollection<Inverter>();
-            foreach (Inverter temp in clsVaribles._dtInverter)
-            {
-                ListInverters.Add(temp);
-            }
+            ListInverters = clsVaribles._dtInverter;
+            //ListInverters = new ObservableCollection<Inverter>();
+            //foreach (Inverter temp in clsVaribles._dtInverter)
+            //{
+            //    ListInverters.Add(temp);
+            //}
         }
         public void Data2Grid()
         {
-            ListInverters.Clear();
-            foreach (Inverter tempAdd in clsVaribles._dtInverter)
-            {
-                ListInverters.Add(tempAdd);
-            }
+            ListInverters = clsVaribles._dtInverter;
+            //ListInverters.Clear();
+            //foreach (Inverter tempAdd in clsVaribles._dtInverter)
+            //{
+            //    ListInverters.Add(tempAdd);
+            //}
         }
 
         public void ChangeSetPoint()
@@ -144,6 +148,7 @@ namespace SEMS_APP.ViewModels
             try
             {
                 string str = "";
+                ma_diemdo_change.Clear();
                 ObservableCollection<CAP_NHAT_CONG_SUAT> listcapnhat = new ObservableCollection<CAP_NHAT_CONG_SUAT>();
                 foreach (Inverter row in clsVaribles._dtInverter)
                 {
@@ -156,19 +161,20 @@ namespace SEMS_APP.ViewModels
                             KEY = "REDUCE",
                             MA_DIEMDO = row.MA_DIEMDO.ToString(),
                             ACTIVE_POWER = Convert.ToInt32(row.SETPOINT_P_HT),
-                            REACTIVE_POWER = 0,
-                            POWER_FACTOR = 100,
+                            REACTIVE_POWER = null,
+                            POWER_FACTOR = null,
                             REMOTE_VALUE = true,
                             NOI_DUNG = "CÀI ĐẶT ACTIVE_POWER"
                         };
 
                         listcapnhat.Add(capnhat);
+                        ma_diemdo_change.Add(capnhat.MA_DIEMDO);
                     }
                 }
                 if (listcapnhat.Count > 0)
                 {
                     MqttClientRepository.PublibMessage(clsVaribles._topic.yeucau, JsonConvert.SerializeObject(listcapnhat));
-                    DependencyService.Get<IToast>().Show(string.Format("Đã yêu cầu cài đặt công suất inverters: {0}", str));
+                    //DependencyService.Get<IToast>().Show(string.Format("Đã yêu cầu cài đặt công suất inverters: {0}", str));
                 }
             }
             catch (Exception ex)
@@ -180,6 +186,7 @@ namespace SEMS_APP.ViewModels
             try
             {
                 string str = "";
+                ma_diemdo_change.Clear();
                 ObservableCollection<CAP_NHAT_CONG_SUAT> listcapnhat = new ObservableCollection<CAP_NHAT_CONG_SUAT>();
                 foreach (Inverter row in clsVaribles._dtInverter)
                 {
@@ -190,24 +197,39 @@ namespace SEMS_APP.ViewModels
                         {
                             KEY = "REMOTE",
                             MA_DIEMDO = row.MA_DIEMDO.ToString(),
-                            ACTIVE_POWER = 100,
-                            REACTIVE_POWER = 0,
-                            POWER_FACTOR = 100,
+                            ACTIVE_POWER = null,
+                            REACTIVE_POWER = null,
+                            POWER_FACTOR = null,
                             REMOTE_VALUE = on_off,
                             NOI_DUNG = "CÀI ĐẶT REMOTE_VALUE"
                         };
                         listcapnhat.Add(capnhat);
+                        ma_diemdo_change.Add(capnhat.MA_DIEMDO);
                     }
                 }
                 if (listcapnhat.Count > 0)
                 {
                     MqttClientRepository.PublibMessage(clsVaribles._topic.yeucau, JsonConvert.SerializeObject(listcapnhat));
-                    DependencyService.Get<IToast>().Show(string.Format("Đã yêu cầu {0} inverters: {1}", on_off == true ? "MỞ" : "ĐÓNG", str));
+                    //DependencyService.Get<IToast>().Show(string.Format("Đã yêu cầu {0} inverters: {1}", on_off == true ? "MỞ" : "ĐÓNG", str));
                 }
             }
             catch (Exception ex)
             {
             }
+        }
+
+        public void ThongBao()
+        {
+            foreach (string madd in ma_diemdo_change)
+            {
+                foreach (CAP_NHAT_CONG_SUAT mqtt in clsVaribles._dtPhanHoiMqtt)
+                {
+                    if (madd == mqtt.MA_DIEMDO)
+                    {
+                        DependencyService.Get<IToast>().Show(mqtt.NOI_DUNG);
+                    }
+                }    
+            }    
         }
     }
 }

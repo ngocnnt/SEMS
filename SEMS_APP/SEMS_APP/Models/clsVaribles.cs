@@ -10,6 +10,7 @@ namespace SEMS_APP.Models
     {
         public static ObservableCollection<Inverter> _dtInverter = new ObservableCollection<Inverter>();
         public static ObservableCollection<PVString> _dtPVString = new ObservableCollection<PVString>();
+        public static ObservableCollection<CAP_NHAT_CONG_SUAT> _dtPhanHoiMqtt = new ObservableCollection<CAP_NHAT_CONG_SUAT>();
         public struct TOPIC
         {
             public string data;
@@ -80,9 +81,9 @@ namespace SEMS_APP.Models
         {
             public string KEY { get; set; }
             public string MA_DIEMDO { get; set; }
-            public int ACTIVE_POWER { get; set; }
-            public int REACTIVE_POWER { get; set; }
-            public int POWER_FACTOR { get; set; }
+            public int? ACTIVE_POWER { get; set; }
+            public int? REACTIVE_POWER { get; set; }
+            public int? POWER_FACTOR { get; set; }
             public bool REMOTE_VALUE { get; set; }
             public string NOI_DUNG { get; set; }
         }

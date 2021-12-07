@@ -42,7 +42,7 @@
                     </sfGrid:SfDataGrid.GroupColumnDescriptions>
                     <sfGrid:SfDataGrid.Columns >
 
-                        <sfGrid:GridTextColumn MappingName="MA_DIEMDO" HeaderText="Inverters name" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
+                        <sfGrid:GridTextColumn MappingName="MA_DIEMDO" HeaderText="Mã điểm đo" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
                         <sfGrid:GridTextColumn MappingName="STRING" HeaderText="String" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
                         </sfGrid:GridTextColumn>
                         <sfGrid:GridTextColumn MappingName="VA" HeaderText="U(V)" Format="##0.0" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" ColumnSizer="Star">
@@ -83,6 +83,8 @@
                         </sfGrid:GridTableSummaryRow>
                     </sfGrid:SfDataGrid.TableSummaryRows>
                     -->
+
+                    <!--
                     <sfGrid:SfDataGrid.GroupSummaryRows>
                         <sfGrid:GridGroupSummaryRow ShowSummaryInRow="False">
                             <sfGrid:GridSummaryRow.SummaryColumns>
@@ -101,6 +103,7 @@
                             </sfGrid:GridSummaryRow.SummaryColumns>
                         </sfGrid:GridGroupSummaryRow>
                     </sfGrid:SfDataGrid.GroupSummaryRows>
+                    -->
                 </sfGrid:SfDataGrid>
             </Grid>            
         </StackLayout>

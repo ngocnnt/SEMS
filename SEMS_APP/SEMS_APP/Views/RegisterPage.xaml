@@ -75,7 +75,7 @@
                 </sfbutton:SfButton>
                 <Image HeightRequest="50" WidthRequest="50" Margin="20,0,20,0" Aspect="AspectFit">
                     <Image.Source>
-                        <FontImageSource FontFamily="UserIcons"  Glyph="{x:Static local:FontIconClass.Fingerprint}" Color="#0c832f"></FontImageSource>
+                        <FontImageSource FontFamily="UserIcons" Glyph="{Binding Fingerprint}" Color="#0c832f"></FontImageSource>
                     </Image.Source>
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding FingerComand}">
@@ -91,7 +91,7 @@
                         <FontImageSource FontFamily="UserIcons"  Glyph="{x:Static local:FontIconClass.BookAlertOutline}" Color="White"></FontImageSource>
                     </Image.Source>
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding FingerComand}">
+                        <TapGestureRecognizer Command="{Binding }">
 
                         </TapGestureRecognizer>
                     </Image.GestureRecognizers>
@@ -102,7 +102,7 @@
                         <FontImageSource FontFamily="UserIcons"  Glyph="{x:Static local:FontIconClass.PhoneDial}" Color="White"></FontImageSource>
                     </Image.Source>
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding FingerComand}">
+                        <TapGestureRecognizer Command="{Binding }">
 
                         </TapGestureRecognizer>
                     </Image.GestureRecognizers>
@@ -113,7 +113,7 @@
                         <FontImageSource FontFamily="UserIcons"  Glyph="{x:Static local:FontIconClass.Web}" Color="White"></FontImageSource>
                     </Image.Source>
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding FaceComand}">
+                        <TapGestureRecognizer Command="{Binding }">
 
                         </TapGestureRecognizer>
                     </Image.GestureRecognizers>

@@ -182,4 +182,3 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\D
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\SEMS_APP.iOS.pdb.DebugSymbolsProjectOutputGroupOutput.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\Entitlements.plist.NoneOutput.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\Info.plist.NoneOutput.stamp
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.iOS\obj\iPhoneSimulator\Debug\SEMS_APP.iOS.csproj.CopyComplete

@@ -1,5 +1,6 @@
 ﻿using SEMS_APP.Dialog;
 using SEMS_APP.Global;
+using SEMS_APP.Helpers;
 using SEMS_APP.Interface;
 using SEMS_APP.Views;
 using System;
@@ -16,6 +17,8 @@ namespace SEMS_APP.ViewModels
     {
         int _cnt = 0;
         bool _toggledVanTay;
+        string _fingerprint;
+        public string Fingerprint { get => _fingerprint; set { SetProperty(ref _fingerprint, value); } }
         public bool ToggledVanTay 
         { 
             get { return _toggledVanTay; }
@@ -31,6 +34,9 @@ namespace SEMS_APP.ViewModels
 
         public SettingViewModel()
         {
+            if (DeviceInfo.Platform.ToString() == "Android")
+                Fingerprint = FontIconClass.Fingerprint;
+            else Fingerprint = FontIconClass.FaceRecognition;
             _toggledVanTay = Preferences.Get(Config.AprroveFinger, false);      
             if (!_toggledVanTay)
                 _cnt++;

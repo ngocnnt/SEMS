@@ -30,19 +30,21 @@ namespace SEMS_APP.ViewModels
         }
         public AlarmsViewModel()
         {
-            ListInverters = new ObservableCollection<Inverter>();
-            foreach (Inverter temp in clsVaribles._dtInverter)
-            {
-                ListInverters.Add(temp);
-            }
+            ListInverters = clsVaribles._dtInverter;
+            //ListInverters = new ObservableCollection<Inverter>();
+            //foreach (Inverter temp in clsVaribles._dtInverter)
+            //{
+            //    ListInverters.Add(temp);
+            //}
         }
         public void Data2Grid()
         {
-            ListInverters.Clear();
-            foreach (Inverter tempAdd in clsVaribles._dtInverter)
-            {
-                ListInverters.Add(tempAdd);
-            }
+            ListInverters = clsVaribles._dtInverter;
+            //ListInverters.Clear();
+            //foreach (Inverter tempAdd in clsVaribles._dtInverter)
+            //{
+            //    ListInverters.Add(tempAdd);
+            //}
         }
     }
 }

@@ -37,10 +37,11 @@
                                    GroupCaptionTextFormat="{}{ColumnName}: {Key}"
                 >
                     <sfGrid:SfDataGrid.GroupColumnDescriptions>
-                        <sfGrid:GroupColumnDescription ColumnName="TEN_DIEMDO" />
+                        <sfGrid:GroupColumnDescription ColumnName="MA_KHANG" />
                     </sfGrid:SfDataGrid.GroupColumnDescriptions>
                     <sfGrid:SfDataGrid.Columns >
-                        <sfGrid:GridTextColumn MappingName="TEN_DIEMDO" HeaderText="Inverters name" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
+                        <sfGrid:GridTextColumn MappingName="MA_KHANG" HeaderText="Mã khách hàng" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
+                        <sfGrid:GridTextColumn MappingName="TEN_DIEMDO" HeaderText="Inverters" HeaderFontAttribute="Bold"   HeaderCellTextSize="16"/>
                         <sfGrid:GridTextColumn MappingName="EVENT" HeaderText="Sự kiện" HeaderFontAttribute="Bold" HeaderCellTextSize="16" ColumnSizer="Star">
                         </sfGrid:GridTextColumn>
                         <sfGrid:GridTextColumn MappingName="STATUS" HeaderText="Status" HeaderFontAttribute="Bold" HeaderCellTextSize="16" ColumnSizer="Star">
