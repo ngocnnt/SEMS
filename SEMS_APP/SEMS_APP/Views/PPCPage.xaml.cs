@@ -54,7 +54,7 @@ namespace SEMS_APP.Views
 
         private void SetPoint_Tap(object sender, EventArgs e)
         {
-            viewModel.SetPoint();
+            viewModel.SetPoints();
         }
 
         private void SetPoint_ValueChanged(object sender, ValueEventArgs e)

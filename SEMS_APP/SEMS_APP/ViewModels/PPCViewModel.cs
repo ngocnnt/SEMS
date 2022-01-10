@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
+using SEMS_APP.Dialog;
 using static SEMS_APP.Models.clsVaribles;
 
 namespace SEMS_APP.ViewModels
@@ -135,14 +136,33 @@ namespace SEMS_APP.ViewModels
             }
         }
 
-        public void TurnOff()
+        public async void TurnOff()
         {
-            SetOnOff(false);
+            var ok = await new MessageXacThucMatKhau().Show();
+            if (ok == Global.DialogReturn.OK)
+            {
+                SetOnOff(false);
+            }
         }
-        public void TurnOn()
+
+        public async void TurnOn()
         {
-            SetOnOff(true);
+            var ok = await new MessageXacThucMatKhau().Show();
+            if (ok == Global.DialogReturn.OK)
+            {
+                SetOnOff(true);
+            }
         }
+
+        public async void SetPoints()
+        {
+            var ok = await new MessageXacThucMatKhau().Show();
+            if (ok == Global.DialogReturn.OK)
+            {
+                SetPoint();
+            }
+        }
+
         public void SetPoint()
         {
             try
