@@ -52,7 +52,6 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\bin\Debug\com.cpc
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\bin\Debug\com.cpcemec.sems_app-Signed.apk.idsig
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\bin\Debug\SEMS_APP.dll
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\bin\Debug\SEMS_APP.pdb
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\SEMS_APP.Android.csproj.CopyComplete
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\SEMS_APP.Android.dll
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\SEMS_APP.Android.pdb
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\android\bin\com.cpcemec.sems_app.apk
@@ -919,3 +918,4 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\sta
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Debug\110\SEMS_APP.Android.csproj.CopyComplete

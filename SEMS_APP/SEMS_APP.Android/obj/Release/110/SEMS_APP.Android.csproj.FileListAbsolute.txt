@@ -907,7 +907,6 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\s
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\stamp\_GenerateJavaStubs.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\stamp\_GeneratePackageManagerJava.stamp
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\stamp\_ResolveLibraryProjectImports.stamp
-D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\SEMS_APP.Android.csproj.CopyComplete
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\androidx\jl\5036f921-d599-47b6-9256-5519043eb923.jar
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\androidx\proguard\14d4a1c4-b6cc-43e6-ae76-fe1688f03ecf.txt
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\androidx\proguard\2d7dc5e1-c97d-44fd-aad6-2a1001bdc166.txt

@@ -18,7 +18,7 @@ namespace SEMS_APP.Models
             public string yeucau;
             public string pvstring;
         }
-        public static TOPIC _topic = new TOPIC { data = "REALTIME/CPC/#", phanhoi = "EMEC/INVERTER/PHANHOI", yeucau = "EMEC/INVERTER/YEUCAU", pvstring = "PVSTRING/CPC/#" };
+        public static TOPIC _topic = new TOPIC { data = "", phanhoi = "EMEC/INVERTER/PHANHOI", yeucau = "EMEC/INVERTER/YEUCAU", pvstring = "" };
 
         public struct PERFORMANCE
         {

@@ -181,7 +181,7 @@
 
 	/* 17: SEMS_APP.dll */
 	/* uncompressed_file_size */
-	.long	1413120
+	.long	1414656
 	/* loaded */
 	.byte	0
 	/* data */
