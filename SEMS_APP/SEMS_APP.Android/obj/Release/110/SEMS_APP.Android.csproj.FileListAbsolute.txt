@@ -922,3 +922,4 @@ D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\a
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\androidx\proguard\cfe6b5b7-997c-48a5-90b4-93fc1b56ca8f.cfg
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\androidx\proguard\e0e34d71-b0c0-4b0f-b5d8-b7fff446c5cc.txt
 D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\androidx\proguard\fa5e6624-cf2f-4d27-b4d7-e2854b9ff904.txt
+D:\Xamarin\BUILD APP CENTER\SEMS_APP\SEMS_APP\SEMS_APP.Android\obj\Release\110\SEMS_APP.Android.csproj.CopyComplete
